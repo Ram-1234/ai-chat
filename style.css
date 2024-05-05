@@ -1,0 +1,178 @@
+body{
+    overflow: hidden;
+    height: 100%;
+}
+
+.navbar_logo{
+    color: #fff;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    text-decoration: underline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 5;
+}
+
+.form_conatiner{
+    position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    overflow: hidden;
+    /* height: 100%; */
+    /* border:5px solid red;     */
+}
+
+/* message area */
+.rootBox{
+    text-align: start;
+    z-index: -5;
+    overflow-y: scroll;
+    /* min-height: 26.8rem; */
+    /* max-height: 26rem; */
+    height: 26.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 3px solid green; */
+}
+
+.rootBox>.wrap_response_msg{
+    width: 50%;
+}
+
+.rootBox>.wrap_response_msg>h4{
+    margin: 1rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
+.rootBox>.wrap_response_msg>p{
+    margin: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+
+/* search area */
+.search_area{
+    z-index: 10;
+    border-top: 1px solid rgb(235, 235, 235);
+    /* border: 3px solid blue; */
+}
+
+.search_area>.form_box_wrap{
+    width: 55%;
+}
+
+form{
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    width: 10%;
+    height: 100%;
+}
+
+button>i{
+    color: lightgrey;
+    font-size: 2rem;
+    filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+    transform: rotate(45deg);
+    display: inline-block;
+}
+
+
+.scrollDown{
+    font-size: 2rem;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    display: none;
+}
+.scrollDown>i{
+    color: #2e5081;
+    cursor: pointer;
+}
+.toggle{
+    display: inline-block;
+}
+
+.new_topic{
+    background-color: #1543CD;
+    color: #fff;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+    display: grid;
+    place-items: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.new_topic>i{
+  font-size: 1.3rem;
+  /* border: 1px solid red; */
+}
+
+.new_topic[title]:hover::after{
+    /* content: "New Topic"; */
+}
+
+.user_input_wrapper{
+    display: flex;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    border: 0.5px solid grey;
+    border-radius: 1rem;
+    padding: .6rem;
+}
+
+.user_input_wrapper>textarea {
+    border: none;
+    overflow: auto;
+    outline: none;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    resize: none; 
+    width: 95%;
+    font-size: 1rem;
+}
+
+
+@media only screen and (max-width: 992px){
+    button{
+        width: 10%;
+    }
+    button>i{
+        font-size: 1.8rem;
+    }
+    .user_input_wrapper>textarea {
+        width: 85%;
+        font-size: 0.8rem;
+    }
+    .search_area>.form_box_wrap{
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 756px){
+    button{
+        width: 20%;
+    }
+    button>i{
+        font-size: 1.6rem;
+    }
+    .user_input_wrapper>textarea {
+        width: 95%;
+        font-size: 0.6rem;
+    }
+    .search_area>.form_box_wrap{
+        width: 85%;
+    }
+}
+
+
