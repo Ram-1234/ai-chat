@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="96px" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Big_Data</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Technology_Icons" transform="translate(-880.000000, -96.000000)" fill-rule="nonzero">
+            <g id="Big-Data" transform="translate(880.000000, 96.000000)">
+                <g id="Group-65" transform="translate(11.000000, 11.000000)">
+                    <g id="Group-31" transform="translate(22.000000, 14.500000)" stroke="#FFFFFF" stroke-width="1.8">
+                        <g id="Group-30" transform="translate(0.000000, 0.500000)">
+                            <polygon id="Rectangle-Copy-4" fill="" points="28.7115853 14.622474 28.7115853 30.9511068 14.635349 38.8581882 14.635349 22.6076545"></polygon>
+                            <polygon id="Rectangle" fill="" transform="translate(14.635349, 14.661736) rotate(-315.000000) translate(-14.635349, -14.661736) " points="9.39142358 9.41781043 24.5887511 4.70833376 20.0503947 20.0767815 4.68194691 24.615138"></polygon>
+                            <polygon id="Rectangle" fill="" points="0.559112755 14.622474 14.635349 22.6076545 14.635349 38.8581882 0.559112755 30.9511068"></polygon>
+                        </g>
+                    </g>
+                    <ellipse id="Oval" stroke="#FFFFFF" stroke-width="2" transform="translate(37.000000, 38.000000) rotate(-315.000000) translate(-37.000000, -38.000000) " cx="37" cy="38" rx="32" ry="20"></ellipse>
+                    <path d="M37,57 C54.673112,57 69,48.045695 69,37 C69,25.954305 54.673112,17 37,17 C19.326888,17 5,25.954305 5,37 C5,44.9941092 12.5042263,51.8927771 23.3501268,55.0944087 C23.8881677,55.2532346 24.4344322,55.4029622 24.9884123,55.5432741 C28.6972809,56.4826553 32.7519746,57 37,57 Z" id="Oval" stroke="#FFFFFF" stroke-width="2" transform="translate(37.000000, 37.000000) rotate(-225.000000) translate(-37.000000, -37.000000) "></path>
+                    <circle id="Oval-Copy-9" stroke="#FFFFFF" stroke-width="2" fill="" cx="56.3771387" cy="12.3771387" r="2.3771387"></circle>
+                    <circle id="Oval-Copy-17" stroke="#FFFFFF" stroke-width="2" fill="" cx="20.3771387" cy="62.3771387" r="2.3771387"></circle>
+                    <circle id="Oval-Copy-8" stroke="#FFFFFF" stroke-width="2" fill="" cx="60.3771387" cy="59.3771387" r="2.3771387"></circle>
+                    <circle id="Oval-Copy-16" stroke="#FFFFFF" stroke-width="2" fill="" cx="12.3771387" cy="17.3771387" r="2.3771387"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

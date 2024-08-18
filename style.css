@@ -7,18 +7,18 @@ body{
     color: #fff;
     font-size: 1rem;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 600;
     text-decoration: underline;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     z-index: 5;
 }
 
+/* form container */
 .form_conatiner{
     position: relative;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     overflow: hidden;
-    /* height: 100%; */
-    /* border:5px solid red;     */
+    background: #fff;
 }
 
 /* message area */
@@ -26,58 +26,108 @@ body{
     text-align: start;
     z-index: -5;
     overflow-y: scroll;
-    /* min-height: 26.8rem; */
-    /* max-height: 26rem; */
-    height: 26.8rem;
+    max-height: 28rem;
+    height: 26rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    /* border: 3px solid green; */
+    scrollbar-width: thin;
 }
 
 .rootBox>.wrap_response_msg{
-    width: 50%;
+    width: 80%;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-.rootBox>.wrap_response_msg>h4{
-    margin: 1rem;
-    font-size: 1rem;
-    line-height: 1.2rem;
+.rootBox>.wrap_response_msg>div>h4{
+    font-family: Metropolis, -apple-system, BlinkMacSystemFont, Ubuntu, Segoe UI, Roboto, Oxygen, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    text-align: start;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    width: auto;
+    background: #edeaea;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
 }
 
-.rootBox>.wrap_response_msg>p{
-    margin: 0.5rem 1rem;
-    font-size: 0.8rem;
+.prompt_user_icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 10px;
+    background: #2e5081;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rootBox>.wrap_response_msg>div>p{
+    width: 95%;
+    margin-left: 0.5rem;
+    font-family: Metropolis, -apple-system, BlinkMacSystemFont, Ubuntu, Segoe UI, Roboto, Oxygen, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-align: start;
+}
+
+.rootBox>.wrap_response_msg>div> .prompt_techsagar_icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #2e5081;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rootBox>.wrap_response_msg>div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0.5rem 0;
 }
 
 /* search area */
 .search_area{
     z-index: 10;
-    border-top: 1px solid rgb(235, 235, 235);
-    /* border: 3px solid blue; */
+    width: 80%!important;
+    margin: auto;
 }
 
 .search_area>.form_box_wrap{
-    width: 55%;
+    /* width: 80%; */
 }
 
 form{
     display: flex;
-    width: 100%;
     padding: 1rem;
 }
 
 button{
     border: none;
     background-color: transparent;
-    width: 10%;
-    height: 100%;
+    width: 6%;
+    height: auto;
 }
 
 button>i{
     color: lightgrey;
-    font-size: 2rem;
+    font-size: 2.2rem;
     filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
     transform: rotate(45deg);
     display: inline-block;
@@ -87,7 +137,7 @@ button>i{
 .scrollDown{
     font-size: 2rem;
     position: absolute;
-    top: 60%;
+    bottom: 22%;
     left: 50%;
     display: none;
 }
@@ -100,7 +150,7 @@ button>i{
 }
 
 .new_topic{
-    background-color: #1543CD;
+    background-color: #2e5081;
     color: #fff;
     border-radius: 50%;
     width: 3rem;
@@ -112,37 +162,199 @@ button>i{
     cursor: pointer;
 }
 
-.new_topic>i{
-  font-size: 1.3rem;
-  /* border: 1px solid red; */
+/* new topic icon / refresh page*/
+.new_topic>img{
+    font-size: 1.3rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.new_topic[title]:hover::after{
-    /* content: "New Topic"; */
+/* input textfield wrapper */
+.outer_wrapper{
+    position: relative;
+    background: linear-gradient(to right, #2e5081,blue, purple);
+    border-radius: 1.25rem;
+    padding: 0.1rem 0.1rem!important;
+    width: 100%;
 }
-
 .user_input_wrapper{
     display: flex;
     width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
-    border: 0.5px solid grey;
-    border-radius: 1rem;
-    padding: .6rem;
+    border-radius: 1.2rem;
+    padding: .4rem;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    margin: 0;
 }
 
+/* input textfield */
 .user_input_wrapper>textarea {
     border: none;
     overflow: auto;
     outline: none;
     box-shadow: none;
-    display: flex;
-    align-items: center;
     resize: none; 
     width: 95%;
     font-size: 1rem;
+    margin-left: 1rem;
 }
 
+/* sugesstion messages */
+.suggetion_box{
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 80%!important;
+}
 
+/* top box */
+.top_box{
+    text-align: center; 
+    /* border: 1px solid black; */
+    margin-bottom: 1rem;
+}
+
+.top_box>.techsagar_logo_icon{
+    position: relative;
+    margin: auto;
+    width: 5rem;
+    height: 5rem;
+    display: block;
+    object-fit: contain;
+    /* border: 1px solid red; */
+}
+
+.top_box>.techsagar_logo_icon:hover:after{
+    color:#fff;
+    background:#111;
+    /* padding:0.5rem 1rem; */
+    border-radius:0.3rem;
+    content:attr(data-title);
+    content:'';
+    font-family:"Roboto", sans-serif;
+    font-size:0.8rem;
+    position:absolute;
+    /* bottom:-2.2rem; */
+    left:50px;
+}
+
+.top_box>h4{
+    margin: 0.4rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2rem;
+    font-family: Metropolis, -apple-system, BlinkMacSystemFont, Ubuntu, Segoe UI, Roboto, Oxygen, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+/* bottom box */
+.bottom_box{
+    box-sizing: border-box;
+    padding: 1rem 0px;
+}
+
+.suggetionQ{
+    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    border-radius: 0.5rem;
+    margin: 0 0.5rem; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 0;
+    background: #e5f0fd;
+    min-height: 14rem;
+}
+
+.send_arrow{
+    margin-right: 0.5rem;
+    opacity: 0.2;
+    position: absolute;
+    right: 0.1rem;
+}
+
+.arrow_toggle{
+    display: none;
+}
+
+.suggetionQ:hover{
+    transform: scale(1.01);
+    border: none;
+    background: #fff;
+}
+
+.suggetionQ>.prompt_icon{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0.5rem 0;
+    border-radius: 50%;
+    background-color: #2e5081;
+    z-index: 1;
+}
+.suggetionQ>p{
+    height: 7rem;
+}
+
+.prompt_icon>img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.suggetionQ>p{
+    font-size: 1rem;
+    font-family: Metropolis, -apple-system, BlinkMacSystemFont, Ubuntu, Segoe UI, Roboto, Oxygen, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-weight: 500;
+    line-height: 1.5rem;
+    padding: 0.1rem 0.5rem; 
+    text-align: center;
+    color: #545454;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* suggestion box hide and show */
+.suggetion_toggle{
+    display: none;
+}
+
+/* trending */
+.trending{
+    /* border: 1px solid #333; */
+    padding:  .2rem 1rem;
+    position: absolute;
+    right: 0;
+    top: 0.7rem;
+    color: #fff;
+    background: #2e5081;
+    border-radius: 0.8rem 0 0 0.8rem;
+    font-size: 0.6rem;
+    z-index: 10;
+}
+
+.icon_color_toggle:hover .uk-hidden-hover>svg{
+   color: #2e5081;
+}
+
+.uk-hidden-hover>svg{
+    /* width: 0.6rem!important;
+    height: 1.2rem!important; */
+
+    width: 1rem!important;
+    height: 1.5rem!important;
+    color: #fff;
+}
+
+/* media query | responsiveness */
 @media only screen and (max-width: 992px){
     button{
         width: 10%;
@@ -151,12 +363,46 @@ button>i{
         font-size: 1.8rem;
     }
     .user_input_wrapper>textarea {
-        width: 85%;
         font-size: 0.8rem;
     }
     .search_area>.form_box_wrap{
-        width: 65%;
+        width: 100%;
     }
+
+    .suggetionQ{
+        min-height: 12rem;
+    }
+
+    .rootBox{
+        max-height: 22rem;
+        height: 20rem;
+    }
+    .suggetion_box{
+        position: absolute;
+        top: 0%;
+    }
+   
+    .top_box>.techsagar_logo_icon{
+        width:4.5rem;
+        height:4.5rem;
+    }
+    .suggetionQ>.prompt_icon{
+        width: 3rem;
+        height: 3rem;
+        margin: 0.4rem 0;
+    }
+
+    .new_topic{
+        width: 2.8rem;
+        height: 2.8rem;
+        margin-right: 0.4rem;
+    }
+
+    .new_topic>img{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
 }
 
 @media only screen and (max-width: 756px){
@@ -167,11 +413,49 @@ button>i{
         font-size: 1.6rem;
     }
     .user_input_wrapper>textarea {
-        width: 95%;
         font-size: 0.6rem;
     }
     .search_area>.form_box_wrap{
-        width: 85%;
+        width: 100%!important;
+    }
+    .rootBox{
+        max-height: 23rem;
+        height: 21rem;
+    }
+    .suggetionQ{
+        min-height: 11.5rem;
+    }
+    .bottom_box{
+        display: inline-block;
+        width: 100%;
+    }
+    .top_box>img{
+        margin: auto;
+        margin: 0.5rem;
+    }
+    
+    .top_box>h4{
+        font-size: large;
+    }
+    .top_box>.techsagar_logo_icon{
+        width:4rem;
+        height:4rem;
+    }
+    .suggetionQ>.prompt_icon{
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0.4rem 0;
+    }
+
+    .new_topic{
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-right: 0.4rem;
+    }
+
+    .new_topic>img{
+        width: 1.3rem;
+        height: 1.3rem;
     }
 }
 
